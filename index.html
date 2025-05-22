@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotelero - Modern Booking Engine for Hotels</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Hotelero<span>.</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact" class="btn-primary"><i class="fas fa-rocket"></i> Get Started</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Revolutionize Your <span class="gradient-text">Hotel Bookings</span></h1>
+                <p>Hotelero is a powerful, easy-to-integrate booking engine with a modern dashboard that increases direct bookings and maximizes your revenue.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary"><i class="fas fa-play-circle"></i> Request Demo</a>
+                    <a href="#features" class="btn-secondary"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Hotels</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">More Bookings</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/dashboard.png" alt="Hotelero Booking Engine Dashboard">
+<!--
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIERhcmsgYmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWUyOTNiIiByeD0iMTYiIHJ5PSIxNiIvPgogIDwhLS0gSGVhZGVyIC0tPgogIDxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSI2MCIgZmlsbD0iIzBmMTcyYSIgcng9IjgiIHJ5PSI4Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTUiIGZpbGw9IiMzYjgyZjYiLz4KICA8cmVjdCB4PSI4MCIgeT0iNDAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiIGZpbGw9IiNmM2Y0ZjYiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjYwMCIgeT0iNDAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzNDE1NSIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjgwIiB5PSI0MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KCiAgPCEtLSBTaWRlYmFyIC0tPgogIDxyZWN0IHg9IjIwIiB5PSIxMDAiIHdpZHRoPSIxNjAiIGhlaWdodD0iNDgwIiBmaWxsPSIjMGYxNzJhIiByeD0iOCIgcnk9IjgiLz4KICA8cmVjdCB4PSI0MCIgeT0iMTMwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI0MCIgeT0iMTcwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjM2I4MmY2IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI0MCIgeT0iMjEwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI0MCIgeT0iMjUwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KCiAgPCEtLSBNYWluIGNvbnRlbnQgLS0+CiAgPCEtLSBDYXJkIDEgLS0+CiAgPHJlY3QgeD0iMjAwIiB5PSIxMDAiIHdpZHRoPSIxNzAiIGhlaWdodD0iMTIwIiBmaWxsPSIjMGYxNzJhIiByeD0iOCIgcnk9IjgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjEyMCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZjNmNGY2IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjE1MCIgd2lkdGg9IjEzMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzMzNDE1NSIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iMjIwIiB5PSIxNzAiIHdpZHRoPSI5MCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzMzNDE1NSIgcng9IjQiIHJ5PSI0Ii8+CiAgPGNpcmNsZSBjeD0iMzQwIiBjeT0iMTQwIiByPSIyMCIgZmlsbD0iIzNiODJmNiIvPgogIDx0ZXh0IHg9IjM0MCIgeT0iMTQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4zMSU8L3RleHQ+CgogIDwhLS0gQ2FyZCAyIC0tPgogIDxyZWN0IHg9IjM5MCIgeT0iMTAwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjEyMCIgZmlsbD0iIzBmMTcyYSIgcng9IjgiIHJ5PSI4Ii8+CiAgPHJlY3QgeD0iNDEwIiB5PSIxMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNDEwIiB5PSIxNTAiIHdpZHRoPSIxMzAiIGhlaWdodD0iMTAiIGZpbGw9IiMzMzQxNTUiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjQxMCIgeT0iMTcwIiB3aWR0aD0iOTAiIGhlaWdodD0iMTAiIGZpbGw9IiMzMzQxNTUiIHJ4PSI0IiByeT0iNCIvPgogIDxjaXJjbGUgY3g9IjUzMCIgY3k9IjE0MCIgcj0iMjAiIGZpbGw9IiNlYzQ4OTkiLz4KICA8dGV4dCB4PSI1MzAiIHk9IjE0NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+MTIlPC90ZXh0PgoKICA8IS0tIENhcmQgMyAtLT4KICA8cmVjdCB4PSI1ODAiIHk9IjEwMCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiMwZjE3MmEiIHJ4PSI4IiByeT0iOCIvPgogIDxyZWN0IHg9IjYwMCIgeT0iMTIwIiB3aWR0aD0iODAiIGhlaWdodD0iMjAiIGZpbGw9IiNmM2Y0ZjYiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjYwMCIgeT0iMTUwIiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI2MDAiIHk9IjE3MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KICA8Y2lyY2xlIGN4PSI3MjAiIGN5PSIxNDAiIHI9IjIwIiBmaWxsPSIjZjk3MzE2Ii8+CiAgPHRleHQgeD0iNzIwIiB5PSIxNDUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjczJTwvdGV4dD4KCiAgPCEtLSBHcmFwaCAtLT4KICA8cmVjdCB4PSIyMDAiIHk9IjI0MCIgd2lkdGg9IjU1MCIgaGVpZ2h0PSIxNjAiIGZpbGw9IiMwZjE3MmEiIHJ4PSI4IiByeT0iOCIvPgogIDxyZWN0IHg9IjIyMCIgeT0iMjYwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZjNmNGY2IiByeD0iNCIgcnk9IjQiLz4KICA8IS0tIEdyYXBoIGJhcnMgLS0+CiAgPHJlY3QgeD0iMjQwIiB5PSIzMDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iMjgwIiB5PSIzMjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI2MCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iMzIwIiB5PSIyODAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMzYjgyZjYiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjM2MCIgeT0iMzAwIiB3aWR0aD0iMjAiIGhlaWdodD0iODAiIGZpbGw9IiMzYjgyZjYiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjQwMCIgeT0iMjcwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTEwIiBmaWxsPSIjM2I4MmY2IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI0NDAiIHk9IjI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjM2I4MmY2IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI0ODAiIHk9IjMxMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjcwIiBmaWxsPSIjM2I4MmY2IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI1MjAiIHk9IjI4MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNTYwIiB5PSIzMDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjAwIiB5PSIzMzAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjQwIiB5PSIzMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI3MCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjgwIiB5PSIzMDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CgogIDwhLS0gVGFibGUgLS0+CiAgPHJlY3QgeD0iMjAwIiB5PSI0MjAiIHdpZHRoPSI1NTAiIGhlaWdodD0iMTYwIiBmaWxsPSIjMGYxNzJhIiByeD0iOCIgcnk9IjgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ0MCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iMjIwIiB5PSI0ODAiIHdpZHRoPSI1MTAiIGhlaWdodD0iMSIgZmlsbD0iIzMzNDE1NSIvPgogIDxyZWN0IHg9IjIyMCIgeT0iNTIwIiB3aWR0aD0iNTEwIiBoZWlnaHQ9IjEiIGZpbGw9IiMzMzQxNTUiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjU2MCIgd2lkdGg9IjUxMCIgaGVpZ2h0PSIxIiBmaWxsPSIjMzM0MTU1Ii8+CgogIDwhLS0gVGFibGUgaGVhZGVycyAtLT4KICA8cmVjdCB4PSIyMjAiIHk9IjQ1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzMzNDE1NSIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iMzUwIiB5PSI0NTAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAiIGZpbGw9IiMzMzQxNTUiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjQ4MCIgeT0iNDUwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjQ1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzMzNDE1NSIgcng9IjQiIHJ5PSI0Ii8+CgogIDwhLS0gVGFibGUgcm93IDEgLS0+CiAgPHJlY3QgeD0iMjIwIiB5PSI0OTAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iMzUwIiB5PSI0OTAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNDgwIiB5PSI0OTAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSI0OTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSIxMCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CgogIDwhLS0gVGFibGUgcm93IDIgLS0+CiAgPHJlY3QgeD0iMjIwIiB5PSI1MzAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iMzUwIiB5PSI1MzAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNDgwIiB5PSI1MzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2YzZjRmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSI1MzAiIHdpZHRoPSI1MCIgaGVpZ2h0PSIxMCIgZmlsbD0iI2VjNDg5OSIgcng9IjQiIHJ5PSI0Ii8+Cjwvc3ZnPg==" alt="Hotelero Booking Engine Dashboard">
+            -->
+                <div class="hero-image-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-hotel"></i></div>
+                <h2>500+</h2>
+                <p>Hotels Using Hotelero</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                <h2>30%</h2>
+                <p>Average Increase in Direct Bookings</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-headset"></i></div>
+                <h2>24/7</h2>
+                <p>Customer Support</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-language"></i></div>
+                <h2>15+</h2>
+                <p>Supported Languages</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful <span class="gradient-text">Features</span></h2>
+                <p>Everything you need to boost your direct bookings</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Optimized</h3>
+                    <p>Perfect booking experience on any device, increasing conversion rates by up to 25%.</p>
+                    <div class="feature-badge">Popular</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Multi-language</h3>
+                    <p>Support for 15+ languages to serve international guests with ease.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>PCI-compliant payment processing with support for 50+ payment methods.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Comprehensive insights into booking patterns and customer behavior.</p>
+                    <div class="feature-badge">New</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Dynamic Pricing</h3>
+                    <p>Automatically adjust rates based on demand, seasonality, and competitor pricing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Channel Manager</h3>
+                    <p>Seamless integration with OTAs to prevent overbookings and manage inventory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose <span class="gradient-text">Hotelero</span>?</h2>
+                <p>The smart choice for modern hoteliers</p>
+            </div>
+            <div class="benefits-container">
+                <div class="benefit-content">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-check-circle"></i> Increase Direct Bookings</h3>
+                        <p>Reduce dependency on OTAs and save on commission fees with our conversion-optimized booking engine.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-check-circle"></i> Boost Revenue</h3>
+                        <p>Implement upselling strategies, dynamic pricing, and personalized offers to maximize revenue per booking.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-check-circle"></i> Seamless Integration</h3>
+                        <p>Easily integrate with your existing website, PMS, and other hotel management tools.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-check-circle"></i> Data Ownership</h3>
+                        <p>Own your customer data and leverage it for targeted marketing campaigns and personalized experiences.</p>
+                    </div>
+                    <div class="benefit-cta">
+                        <a href="#contact" class="btn-primary"><i class="fas fa-rocket"></i> Get Started</a>
+                    </div>
+                </div>
+                <div class="benefit-image">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIERhcmsgYmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMWUyOTNiIiByeD0iMTYiIHJ5PSIxNiIvPgogIDwhLS0gSGVhZGVyIC0tPgogIDxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSI2MCIgZmlsbD0iIzBmMTcyYSIgcng9IjgiIHJ5PSI4Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTUiIGZpbGw9IiNlYzQ4OTkiLz4KICA8cmVjdCB4PSI4MCIgeT0iNDAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiIGZpbGw9IiNmM2Y0ZjYiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjYwMCIgeT0iNDAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzMzNDE1NSIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjgwIiB5PSI0MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMzM0MTU1IiByeD0iNCIgcnk9IjQiLz4KCiAgPCEtLSBDaGFydCBTZWN0aW9uIC0tPgogIDxyZWN0IHg9IjIwIiB5PSIxMDAiIHdpZHRoPSI3NjAiIGhlaWdodD0iMjIwIiBmaWxsPSIjMGYxNzJhIiByeD0iOCIgcnk9IjgiLz4KICA8IS0tIENoYXJ0IFRpdGxlIC0tPgogIDx0ZXh0IHg9IjQwIiB5PSIxMzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iI2YzZjRmNiI+UmVzZXJ2YXRpb24gU3RhdHM8L3RleHQ+CgogIDwhLS0gRG9udXQgQ2hhcnQgLS0+CiAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iMjAwIiByPSI3MCIgZmlsbD0iIzBmMTcyYSIgc3Ryb2tlPSIjM2I4MmY2IiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtZGFzaGFycmF5PSIxMjUgNDQwIi8+CiAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iMjAwIiByPSI3MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWM0ODk5IiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtZGFzaGFycmF5PSIyMjAgMzQ1IiBzdHJva2UtZGFzaG9mZnNldD0iMTI1Ii8+CiAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iMjAwIiByPSI3MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjk3MzE2IiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtZGFzaGFycmF5PSIxMjUgNDQwIiBzdHJva2UtZGFzaG9mZnNldD0iMzQ1Ii8+CiAgPHRleHQgeD0iMTIwIiB5PSIxOTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2YzZjRmNiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VG90YWw8L3RleHQ+CiAgPHRleHQgeD0iMTIwIiB5PSIyMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2YzZjRmNiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+NzglPC90ZXh0PgoKICA8IS0tIExlZ2VuZCAtLT4KICA8Y2lyY2xlIGN4PSIyNDAiIGN5PSIxNzAiIHI9IjgiIGZpbGw9IiMzYjgyZjYiLz4KICA8dGV4dCB4PSIyNjAiIHk9IjE3NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij5EaXJlY3QgQm9va2luZ3M8L3RleHQ+CiAgPGNpcmNsZSBjeD0iMjQwIiBjeT0iMjAwIiByPSI4IiBmaWxsPSIjZWM0ODk5Ii8+CiAgPHRleHQgeD0iMjYwIiB5PSIyMDUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiI+T1RBIEJvb2tpbmdzPC90ZXh0PgogIDxjaXJjbGUgY3g9IjI0MCIgY3k9IjIzMCIgcj0iOCIgZmlsbD0iI2Y5NzMxNiIvPgogIDx0ZXh0IHg9IjI2MCIgeT0iMjM1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPk90aGVyPC90ZXh0PgoKICA8IS0tIEJhciBDaGFydCAtLT4KICA8IS0tIFgtYXhpcyAtLT4KICA8bGluZSB4MT0iMzgwIiB5MT0iMjgwIiB4Mj0iNzQwIiB5Mj0iMjgwIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMiIvPgogIDwhLS0gWS1heGlzIC0tPgogIDxsaW5lIHgxPSIzODAiIHkxPSIxNDAiIHgyPSIzODAiIHkyPSIyODAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIi8+CgogIDwhLS0gQmFycyAtLT4KICA8cmVjdCB4PSI0MDAiIHk9IjE2MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjEyMCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNDUwIiB5PSIxODAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMzYjgyZjYiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjUwMCIgeT0iMTQwIiB3aWR0aD0iMzAiIGhlaWdodD0iMTQwIiBmaWxsPSIjM2I4MmY2IiByeD0iNCIgcnk9IjQiLz4KICA8cmVjdCB4PSI1NTAiIHk9IjE3MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjExMCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjAwIiB5PSIxOTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSI5MCIgZmlsbD0iIzNiODJmNiIgcng9IjQiIHJ5PSI0Ii8+CiAgPHJlY3QgeD0iNjUwIiB5PSIxNTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxMzAiIGZpbGw9IiMzYjgyZjYiIHJ4PSI0IiByeT0iNCIvPgogIDxyZWN0IHg9IjcwMCIgeT0iMTgwIiB3aWR0aD0iMzAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM2I4MmY2IiByeD0iNCIgcnk9IjQiLz4KCiAgPCEtLSBUYWJsZSBTZWN0aW9uIC0tPgogIDxyZWN0IHg9IjIwIiB5PSIzNDAiIHdpZHRoPSI3NjAiIGhlaWdodD0iMjQwIiBmaWxsPSIjMGYxNzJhIiByeD0iOCIgcnk9IjgiLz4KICA8IS0tIFRhYmxlIEhlYWRlciAtLT4KICA8cmVjdCB4PSI0MCIgeT0iMzYwIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMWUyOTNiIiByeD0iNCIgcnk9IjQiLz4KICA8dGV4dCB4PSI3MCIgeT0iMzg1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPkxvY2F0aW9uPC90ZXh0PgogIDx0ZXh0IHg9IjIyMCIgeT0iMzg1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPk5pZ2h0czwvdGV4dD4KICA8dGV4dCB4PSIzNDAiIHk9IjM4NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij5EYXRlPC90ZXh0PgogIDx0ZXh0IHg9IjQ2MCIgeT0iMzg1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPkd1ZXN0czwvdGV4dD4KICA8dGV4dCB4PSI1ODAiIHk9IjM4NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij5QcmljZTwvdGV4dD4KICA8dGV4dCB4PSI3MDAiIHk9IjM4NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij5TdGF0dXM8L3RleHQ+CgogIDwhLS0gVGFibGUgUm93IDEgLS0+CiAgPHJlY3QgeD0iNDAiIHk9IjQxMCIgd2lkdGg9IjcyMCIgaGVpZ2h0PSIxIiBmaWxsPSIjMzM0MTU1Ii8+CiAgPHRleHQgeD0iNzAiIHk9IjQzNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij5PbHltcGljIEhvdGVsIFBhcms8L3RleHQ+CiAgPHRleHQgeD0iMjIwIiB5PSI0MzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiI+MTA8L3RleHQ+CiAgPHRleHQgeD0iMzQwIiB5PSI0MzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiI+MTQgTWF5IDIwMjU8L3RleHQ+CiAgPHRleHQgeD0iNDYwIiB5PSI0MzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiI+MjwvdGV4dD4KICA8dGV4dCB4PSI1ODAiIHk9IjQzNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij4kODQ1PC90ZXh0PgogIDxyZWN0IHg9IjY4MCIgeT0iNDI1IiB3aWR0aD0iODAiIGhlaWdodD0iMjAiIGZpbGw9IiMxMGI5ODEiIHJ4PSIxMCIgcnk9IjEwIi8+CiAgPHRleHQgeD0iNzIwIiB5PSI0MzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNvbmZpcm1lZDwvdGV4dD4KCiAgPCEtLSBUYWJsZSBSb3cgMiAtLT4KICA8cmVjdCB4PSI0MCIgeT0iNDUwIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjEiIGZpbGw9IiMzMzQxNTUiLz4KICA8dGV4dCB4PSI3MCIgeT0iNDc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPkNyZXNjZW50IEJheSBJbm48L3RleHQ+CiAgPHRleHQgeD0iMjIwIiB5PSI0NzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiI+NTwvdGV4dD4KICA8dGV4dCB4PSIzNDAiIHk9IjQ3NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij4wMiBBdWcgMjAyNTwvdGV4dD4KICA8dGV4dCB4PSI0NjAiIHk9IjQ3NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij40PC90ZXh0PgogIDx0ZXh0IHg9IjU4MCIgeT0iNDc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPiQ1OTU8L3RleHQ+CiAgPHJlY3QgeD0iNjgwIiB5PSI0NjUiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2Y5NzMxNiIgcng9IjEwIiByeT0iMTAiLz4KICA8dGV4dCB4PSI3MjAiIHk9IjQ3NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UGVuZGluZzwvdGV4dD4KCiAgPCEtLSBUYWJsZSBSb3cgMyAtLT4KICA8cmVjdCB4PSI0MCIgeT0iNDkwIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjEiIGZpbGw9IiMzMzQxNTUiLz4KICA8dGV4dCB4PSI3MCIgeT0iNTE1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPkdyYW5kIFN1aXRlIFJvb2Y8L3RleHQ+CiAgPHRleHQgeD0iMjIwIiB5PSI1MTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiI+MzwvdGV4dD4KICA8dGV4dCB4PSIzNDAiIHk9IjUxNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij4yMSBEZWMgMjAyNTwvdGV4dD4KICA8dGV4dCB4PSI0NjAiIHk9IjUxNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij4yPC90ZXh0PgogIDx0ZXh0IHg9IjU4MCIgeT0iNTE1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPiQxMjk5PC90ZXh0PgogIDxyZWN0IHg9IjY4MCIgeT0iNTA1IiB3aWR0aD0iODAiIGhlaWdodD0iMjAiIGZpbGw9IiMxMGI5ODEiIHJ4PSIxMCIgcnk9IjEwIi8+CiAgPHRleHQgeD0iNzIwIiB5PSI1MTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNvbmZpcm1lZDwvdGV4dD4KCiAgPCEtLSBUYWJsZSBSb3cgNCAtLT4KICA8cmVjdCB4PSI0MCIgeT0iNTMwIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjEiIGZpbGw9IiMzMzQxNTUiLz4KICA8dGV4dCB4PSI3MCIgeT0iNTU1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPkJhbGk8L3RleHQ+CiAgPHRleHQgeD0iMjIwIiB5PSI1NTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiI+NzwvdGV4dD4KICA8dGV4dCB4PSIzNDAiIHk9IjU1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij4yOSBKdW4gMjAyNTwvdGV4dD4KICA8dGV4dCB4PSI0NjAiIHk9IjU1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZjNmNGY2Ij4yPC90ZXh0PgogIDx0ZXh0IHg9IjU4MCIgeT0iNTU1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmM2Y0ZjYiPiQ3NDk8L3RleHQ+CiAgPHJlY3QgeD0iNjgwIiB5PSI1NDUiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzEwYjk4MSIgcng9IjEwIiByeT0iMTAiLz4KICA8dGV4dCB4PSI3MjAiIHk9IjU1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q29uZmlybWVkPC90ZXh0Pgo8L3N2Zz4=" alt="Hotelero Dashboard">
+                    <div class="benefit-image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo">
+        <div class="container">
+            <div class="demo-container">
+                <div class="demo-content">
+                    <h2>See Hotelero in Action</h2>
+                    <p>Watch how easy it is to manage bookings, set up room types, and increase your direct revenue with Hotelero.</p>
+                    <a href="#contact" class="btn-primary">Request Live Demo</a>
+                </div>
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that works best for your property</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for small properties</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Up to 20 rooms</li>
+                            <li><i class="fas fa-check"></i> Basic booking engine</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li><i class="fas fa-check"></i> Standard reporting</li>
+                            <li><i class="fas fa-check"></i> 2 payment gateways</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Channel manager</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Dynamic pricing</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn-secondary">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <div class="popular-tag">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Ideal for medium-sized hotels</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Up to 50 rooms</li>
+                            <li><i class="fas fa-check"></i> Advanced booking engine</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics</li>
+                            <li><i class="fas fa-check"></i> 5 payment gateways</li>
+                            <li><i class="fas fa-check"></i> Channel manager</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Dynamic pricing</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">199</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For large hotels and chains</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Unlimited rooms</li>
+                            <li><i class="fas fa-check"></i> Premium booking engine</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> Custom reporting</li>
+                            <li><i class="fas fa-check"></i> Unlimited payment gateways</li>
+                            <li><i class="fas fa-check"></i> Channel manager</li>
+                            <li><i class="fas fa-check"></i> Dynamic pricing</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn-secondary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Join hundreds of satisfied hoteliers</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Since implementing Hotelero, our direct bookings have increased by 45%. The ROI has been incredible, and the platform is so easy to use."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEJhY2tncm91bmQgY2lyY2xlIC0tPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjUwIiBmaWxsPSIjM2I4MmY2Ii8+CiAgCiAgPCEtLSBBYnN0cmFjdCBwcm9maWxlIHNoYXBlIC0tPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjZjNmNGY2Ii8+CiAgPHBhdGggZD0iTTI1LDg1IEM0MCwxMDUgNjAsMTA1IDc1LDg1IEw3NSw3MCBDNzUsNjAgNjUsNTUgNTAsNTUgQzM1LDU1IDI1LDYwIDI1LDcwIFoiIGZpbGw9IiNmM2Y0ZjYiLz4KPC9zdmc+" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>General Manager, Oceanview Resort</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The customer support team at Hotelero is exceptional. They helped us set everything up and are always available when we need assistance."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEJhY2tncm91bmQgY2lyY2xlIC0tPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjUwIiBmaWxsPSIjZWM0ODk5Ii8+CiAgCiAgPCEtLSBBYnN0cmFjdCBwcm9maWxlIHNoYXBlIC0tPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjZjNmNGY2Ii8+CiAgPHBhdGggZD0iTTI1LDg1IEM0MCwxMDUgNjAsMTA1IDc1LDg1IEw3NSw3MCBDNzUsNjAgNjUsNTUgNTAsNTUgQzM1LDU1IDI1LDYwIDI1LDcwIFoiIGZpbGw9IiNmM2Y0ZjYiLz4KPC9zdmc+" alt="Michael Chen">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Owner, Boutique Hotel Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The analytics dashboard has given us insights we never had before. We've been able to optimize our pricing strategy and increase our RevPAR by 30%."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEJhY2tncm91bmQgY2lyY2xlIC0tPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjUwIiBmaWxsPSIjZjk3MzE2Ii8+CiAgCiAgPCEtLSBBYnN0cmFjdCBwcm9maWxlIHNoYXBlIC0tPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjZjNmNGY2Ii8+CiAgPHBhdGggZD0iTTI1LDg1IEM0MCwxMDUgNjAsMTA1IDc1LDg1IEw3NSw3MCBDNzUsNjAgNjUsNTUgNTAsNTUgQzM1LDU1IDI1LDYwIDI1LDcwIFoiIGZpbGw9IiNmM2Y0ZjYiLz4KPC9zdmc+" alt="Elena Rodriguez">
+                        <div class="author-info">
+                            <h4>Elena Rodriguez</h4>
+                            <p>Revenue Manager, City Plaza Hotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Boost Your Direct Bookings?</h2>
+                <p>Join hundreds of hotels already using Hotelero to increase their revenue and take control of their bookings.</p>
+                <a href="#contact" class="btn-primary">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Request a demo or speak with our sales team</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="demo-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="hotel">Hotel Name</label>
+                            <input type="text" id="hotel" name="hotel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rooms">Number of Rooms</label>
+                            <select id="rooms" name="rooms">
+                                <option value="1-20">1-20</option>
+                                <option value="21-50">21-50</option>
+                                <option value="51-100">51-100</option>
+                                <option value="100+">100+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Request Demo</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>123 Hotel Tech Avenue, Suite 500<br>San Francisco, CA 94103</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@hotelero.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Hotelero<span>.</span></h2>
+                    <p>The modern booking engine for forward-thinking hotels.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#">Integrations</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">GDPR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hotelero. All rights reserved.</p>
+                <div class="language-selector">
+                    <select>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Demo Widget -->
+    <div class="booking-widget">
+        <div class="widget-header">
+            <h3>Try Our Booking Engine</h3>
+            <p>See how easy it is for guests to book with Hotelero</p>
+        </div>
+        <div class="widget-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="check-in">Check-in</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="guests">Guests</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1 Adult</option>
+                        <option value="2" selected>2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4 Adults</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rooms-count">Rooms</label>
+                    <select id="rooms-count" name="rooms-count">
+                        <option value="1" selected>1 Room</option>
+                        <option value="2">2 Rooms</option>
+                        <option value="3">3 Rooms</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Check Availability</button>
+        </div>
+        <div class="widget-footer">
+            <p>Best Rate Guarantee | Free Cancellation</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

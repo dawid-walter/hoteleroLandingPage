@@ -1,0 +1,67 @@
+/* Minimize Button Styles */
+.minimize-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(59, 130, 246, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Increased z-index to prevent overlay */
+}
+
+/* Special styling for the widget toggle button */
+#widget-toggle-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 4px;
+    top: 8px;
+    right: 8px;
+    position: relative; /* Added relative positioning */
+    z-index: 1000; /* Increased z-index to prevent overlay */
+}
+
+.minimize-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+#widget-toggle-btn:hover {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+}
+
+/* Ensure containers have relative positioning */
+.feature-card,
+.pricing-card,
+.testimonial-card,
+.benefits .container {
+    position: relative;
+}
+
+/* Minimized state */
+.minimized {
+    height: 60px !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.minimized .content,
+.minimized p,
+.minimized .feature-icon,
+.minimized .testimonial-content,
+.minimized .pricing-details,
+.minimized .benefit-item {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
